@@ -25,12 +25,13 @@ namespace Pract8
         public double Step
         {
             get { return _step; }
-            set { _step = _secondValue / _firstValue; }
+            set { _step = value; }
         }
         public GeometricProgression(int firstValue, int secondValue)
         {
             _firstValue = firstValue;
             _secondValue = secondValue;
+            _step = secondValue / firstValue;
         }
         
         public int CompareTo(object obj)
